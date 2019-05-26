@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-viewer--body',
+    selector: 'viewer-body',
     templateUrl: './body.component.html',
     styleUrls: ['./body.component.scss']
 })
