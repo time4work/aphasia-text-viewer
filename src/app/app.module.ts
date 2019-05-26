@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http"
+import { FormsModule } from "@angular/forms"
 
 import { AppComponent } from './app.component';
-import { AuthComponent } from './auth/auth.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component'
-import { TextViewerModule } from './text-viewer/text-viewer.module';
+import { AuthComponent } from './components/auth/auth.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component'
+import { TextViewerModule } from './components/text-viewer/text-viewer.module';
+import { ApiService } from './services/api.service';
 
 @NgModule({
     declarations: [
@@ -14,9 +17,11 @@ import { TextViewerModule } from './text-viewer/text-viewer.module';
     ],
     imports: [
         BrowserModule,
-        TextViewerModule
+        TextViewerModule,
+        HttpClientModule,
+        FormsModule
     ],
-    providers: [],
+    providers: [ApiService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
