@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ApiService } from '../../services/api.service';
-import { UserInterface } from '../../intefaces/User'
+import { UserInterface } from '../../intefaces/User.interface';
 
 @Component({
     selector: 'app-auth',
@@ -16,7 +16,7 @@ export class AuthComponent implements OnInit {
 
     constructor(private api: ApiService) { }
 
-    async ngOnInit() {
+    public async ngOnInit() {
         try {
             const resp = await this.api.fetch()
             console.log(resp);
@@ -28,15 +28,15 @@ export class AuthComponent implements OnInit {
             .subscribe(user => this.user = user)
     }
 
-    ngOnDestroy() {
+    public ngOnDestroy() {
         this.componentDestroyed$.next(true);
     }
 
-    login() {
+    public login() {
         this.api.login(this.username)
     }
 
-    logout() {
+    public logout() {
         this.api.logout();
     }
 }

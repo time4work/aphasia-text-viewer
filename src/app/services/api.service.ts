@@ -10,19 +10,19 @@ export class ApiService {
 
   public user$: BehaviorSubject<UserInterface> = new BehaviorSubject(null);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  fetch() {
+  public fetch() {
     return this.http.get('google.com').toPromise();
   }
 
-  login(username: string) {
+  public login(username: string) {
     // call API
     const user = {username};
     this.user$.next(user);
   }
 
-  logout() {
+  public logout() {
     this.user$.next(null);
   }
 }
