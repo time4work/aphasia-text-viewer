@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     selector: 'viewer-body',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./body.component.scss']
 })
 export class BodyComponent implements OnInit {
+    @Input() public textData: any[];
 
     constructor() { }
 
-    ngOnInit() {
+    public ngOnInit():void {
+        console.log({data: this.textData});
     }
 
+    public ngOnDestroy(): void {
+    }
+
+    public ngOnChanges(): void {
+    }
 }
