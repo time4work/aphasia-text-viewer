@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'viewer-entry',
+    selector: 'app-viewer-entry',
     templateUrl: './entry.component.html',
     styleUrls: []
 })

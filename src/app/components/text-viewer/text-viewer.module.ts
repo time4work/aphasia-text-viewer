@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
+import { WordModalComponent } from './components/header/word-modal.component';
 import { BodyComponent } from './components/body/body.component';
 import { EntryComponent } from './components/entry/entry.component';
 
@@ -9,7 +9,7 @@ import { EntryComponent } from './components/entry/entry.component';
         CommonModule
     ],
     declarations: [
-        HeaderComponent,
+        WordModalComponent,
         BodyComponent,
         EntryComponent
     ],
